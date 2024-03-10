@@ -23,13 +23,41 @@ namespace Calculator
 
             Console.WriteLine(operatorInputMenu);
             string input = Console.ReadLine();
+            string output = "";
+
+            switch(input.ToLower()) {
+                case "+":
+                case "addition":
+                case "1":
+                    output = "+";
+                    break;
+                case "-":
+                case "subraction":
+                case "2":
+                    output = "-";
+                    break;
+                case "*":
+                case "multiplication":
+                case "3":
+                    output = "*";
+                    break;
+                case "/":
+                case "division":
+                case "4":
+                    output = "/";
+                    break;
+                case "%":
+                case "difference":
+                case "5":
+                    output = "%";
+                    break;
+                default:
+                    Console.WriteLine("error: please select a valid option from the menu");
+                    output = "null";
+                    break;
+            }
             
-/*            switch(input) {
-                case '+' || "plus" || '1':
-                    Console.WriteLine("Hi");
-            }*/
-            
-            return "";
+            return output;
         }
 
         public static string[] GetUserInput() {
