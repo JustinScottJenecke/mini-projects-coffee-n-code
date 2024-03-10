@@ -9,7 +9,27 @@ namespace Calculator
 {
     class Calculator
     { 
+        private static string operatorInputMenu = "Please select the operation you would like to perform: \n" +
+                "1) \t + \t addition" +
+                "2) \t - \t subtraction" +
+                "3) \t * \t multiplication" +
+                "4) \t / \t division" +
+                "5) \t % \t difference";
+
         public Calculator() {
+        }
+
+        public static string ProcessOperatorInput() {
+
+            Console.WriteLine(operatorInputMenu);
+            string input = Console.ReadLine();
+            
+/*            switch(input) {
+                case '+' || "plus" || '1':
+                    Console.WriteLine("Hi");
+            }*/
+            
+            return "";
         }
 
         public static string[] GetUserInput() {
