@@ -19,6 +19,16 @@ namespace Calculator
         public Calculator() {
         }
 
+        /// <summary>
+        ///     Function which prints a menu of different operator choices
+        ///     to the console, captures the user's input from the console,
+        ///     and processes the user's choice into a character 
+        ///     that is usable in a mathematical equation, and returns said 
+        ///     character.
+        /// </summary>
+        /// <returns type="string">
+        ///     string output - an operator symbol with the datatype of string
+        /// </returns>
         public static string ProcessOperatorInput() {
 
             Console.WriteLine(operatorInputMenu);
