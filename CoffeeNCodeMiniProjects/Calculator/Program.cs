@@ -15,9 +15,6 @@ namespace Calculator
             {
                 Console.WriteLine(equationArray[i]);
             }
-
-            // Get operator and user input checks
-            Console.WriteLine(Calculator.ProcessOperatorInput());
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Calculator
         public static string ProcessOperatorInput()
         {
             Console.WriteLine(operatorInputMenu);
+            Console.Write("Input: ");
             string input = Console.ReadLine();
 
             string output;
@@ -80,36 +81,65 @@ namespace Calculator
 
             Console.Write("Please enter your first number: ");
             userInput[0] = Console.ReadLine();
-
             Console.WriteLine();
 
+            userInput[1] = ProcessOperatorInput();
+
+            Console.WriteLine();
             Console.Write("Please enter your second number: ");
-            userInput[1] = Console.ReadLine();
+            userInput[2] = Console.ReadLine();
 
             Console.WriteLine();
-
-            Console.Write("Please the operation you would like to perform:");
-            userInput[2] = Console.ReadLine();
 
             return userInput;
         }
 
-        public static int Addition() {
+        public static int CalculateAnswer(string[] expressionArray) 
+        {
+            int answer = 0;
+
+            int num1 = Int32.Parse( expressionArray[0] );
+            int num2 = Int32.Parse( expressionArray[2] );
+            string op = expressionArray[1];
+
+            switch (op) {
+                case "+":
+                    answer = Addition(num1, num2);
+                    break;
+                case "-":
+                    answer = Subtraction(num1, num2);
+                    break;
+                case "*":
+                    answer = Multiplication(num1, num2);
+                    break;
+                case "/":
+                    answer = Division(num1, num2);
+                    break;
+                case "%":
+                    answer = Difference(num1, num2);
+                    break;
+            }
+
+            return answer;
+        }
+
+        public static int Addition(int num1, int num2) {
             return 0;
         }
-        public static int Subtraction()
+        public static int Subtraction(int num1, int num2)
         {
             return 0;
         }
-        public static int Mutiplication()
+        public static int Multiplication(int num1, int num2)
         {
             return 0;
         }
-        public static int Division()
+        public static int Division(int num1, int num2)
         {
             return 0;
         }
-        public static int Modulo() {
+        public static int Difference(int num1, int num2) 
+        {
             return 0;
         }
     }
