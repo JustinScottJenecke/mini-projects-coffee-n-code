@@ -10,6 +10,15 @@
             int realNumber = numberGenerator.Next(1, 8); // generate number between 1 - 7
             Console.WriteLine(realNumber);
 
+            Console.WriteLine("Please guess a number between 1 and 7");
+            Console.Write("Guess: ");
+            int guess = Int32.Parse(Console.ReadLine());
+
+            if (guess == realNumber)
+                Console.WriteLine("Congrats, you are lucky");
+            else
+                Console.WriteLine("Unlucky, you guessed wrong");
+
             Console.ReadLine();
         }
     }
