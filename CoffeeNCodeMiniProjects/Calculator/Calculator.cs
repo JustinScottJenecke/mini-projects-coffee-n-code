@@ -10,11 +10,11 @@ namespace Calculator
     class Calculator
     { 
         private readonly static string operatorInputMenu = "Please select the operation you would like to perform: \n" +
-                "1) \t + \t addition \n" +
-                "2) \t - \t subtraction\n" +
-                "3) \t * \t multiplication\n" +
-                "4) \t / \t division\n" +
-                "5) \t % \t difference\n";
+                "\t 1) \t + \t addition \n" +
+                "\t 2) \t - \t subtraction\n" +
+                "\t 3) \t * \t multiplication\n" +
+                "\t 4) \t / \t division\n" +
+                "\t 5) \t % \t difference\n";
 
         public Calculator() {
         }
@@ -28,14 +28,8 @@ namespace Calculator
         /// </returns>
         public static string ProcessOperatorInput()
         {
-            string input = "";
-  
-            while (string.IsNullOrEmpty(input));
-            {
-                Console.WriteLine(operatorInputMenu);
-                input = Console.ReadLine();
-
-            }
+            Console.WriteLine(operatorInputMenu);
+            string input = Console.ReadLine();
 
             string output;
 
