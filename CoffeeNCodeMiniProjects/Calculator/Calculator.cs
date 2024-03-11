@@ -10,11 +10,11 @@ namespace Calculator
     class Calculator
     { 
         private readonly static string operatorInputMenu = "Please select the operation you would like to perform: \n" +
-                "1) \t + \t addition" +
-                "2) \t - \t subtraction" +
-                "3) \t * \t multiplication" +
-                "4) \t / \t division" +
-                "5) \t % \t difference";
+                "1) \t + \t addition \n" +
+                "2) \t - \t subtraction\n" +
+                "3) \t * \t multiplication\n" +
+                "4) \t / \t division\n" +
+                "5) \t % \t difference\n";
 
         public Calculator() {
         }
@@ -26,11 +26,18 @@ namespace Calculator
         /// <returns type="string">
         ///     string output - an operator symbol with the datatype of string
         /// </returns>
-        public static string ProcessOperatorInput() {
+        public static string ProcessOperatorInput()
+        {
+            string input = "";
+  
+            while (string.IsNullOrEmpty(input));
+            {
+                Console.WriteLine(operatorInputMenu);
+                input = Console.ReadLine();
 
-            Console.WriteLine(operatorInputMenu);
-            string input = Console.ReadLine();
-            string output = "";
+            }
+
+            string output;
 
             switch(input.ToLower()) {
                 case "+":
@@ -66,6 +73,13 @@ namespace Calculator
             return output;
         }
 
+        /// <summary>
+        ///     Function which grabs user input from the console for two Operands, and one Operator, and 
+        ///     returns a mathematical expression in the form of an array
+        /// </summary>
+        /// <returns>
+        ///     Array<string> - [0]: first operand - [1]: operator - [2]: second operand
+        /// </returns>
         public static string[] GetUserInput() {
 
             string[] userInput = new string[3];
