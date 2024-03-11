@@ -9,7 +9,7 @@ namespace Calculator
 {
     class Calculator
     { 
-        private static string operatorInputMenu = "Please select the operation you would like to perform: \n" +
+        private readonly static string operatorInputMenu = "Please select the operation you would like to perform: \n" +
                 "1) \t + \t addition" +
                 "2) \t - \t subtraction" +
                 "3) \t * \t multiplication" +
@@ -66,7 +66,6 @@ namespace Calculator
                     output = "null";
                     break;
             }
-            
             return output;
         }
 
