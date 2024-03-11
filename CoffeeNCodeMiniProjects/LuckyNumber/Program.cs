@@ -16,22 +16,12 @@
 
             while (guess != realNumber) {
 
-                if (guess > realNumber)
-                {
-                    Console.WriteLine("Unlucky, you guessed wrong, try something smaller.");
-                    Console.Write("Guess: ");
-                    guess = Int32.Parse(Console.ReadLine());
-                } 
-
-                if (guess < realNumber) 
-                {
-                    Console.WriteLine("Unlucky, you guessed wrong, try something bigger.");
-                    Console.Write("Guess: ");
-                    guess = Int32.Parse(Console.ReadLine());
-                }
+                Console.WriteLine($"Unlucky, you guessed wrong, try something {(guess > realNumber ? "smaller" : "bigger")}");
+                Console.Write("Guess: ");
+                guess = Int32.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("Congrats, you are lucky! Lucky Number:" + realNumber);
+            Console.WriteLine("Congrats, you are lucky! The Lucky Number was:" + realNumber);
         }
     }
 }
