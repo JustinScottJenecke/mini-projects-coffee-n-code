@@ -6,15 +6,15 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Calculator!");
 
-            // Returning data test
-            string[] equationArray = Calculator.GetUserInput();
+            // Display console prompts, save inputs to array, and return array
+            string[] equation = Calculator.GetUserInput();
 
-            for (int i = 0; i < equationArray.Length; i++)
-            {
-                Console.WriteLine(equationArray[i]);
-            }
+            // Destructure array into seperate variables, resolve expression, and return answer
+            int answer = Calculator.CalculateAnswer(equation);
+
+            Console.WriteLine($"The result of {equation[1]} {equation[0]} {equation[2]} is {answer}");
         }
     }
 }

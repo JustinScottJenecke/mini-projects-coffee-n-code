@@ -79,11 +79,13 @@ namespace Calculator
 
             string[] userInput = new string[3];
 
-            Console.Write("Please enter your first number: ");
-            userInput[0] = Console.ReadLine();
+            // Ask user what operation they would like to perform
+            userInput[0] = ProcessOperatorInput();
             Console.WriteLine();
 
-            userInput[1] = ProcessOperatorInput();
+
+            Console.Write("Please enter your first number: ");
+            userInput[1] = Console.ReadLine();
 
             Console.WriteLine();
             Console.Write("Please enter your second number: ");
@@ -98,9 +100,9 @@ namespace Calculator
         {
             int answer = 0;
 
-            int num1 = Int32.Parse( expressionArray[0] );
+            int num1 = Int32.Parse( expressionArray[1] );
             int num2 = Int32.Parse( expressionArray[2] );
-            string op = expressionArray[1];
+            string op = expressionArray[0];
 
             switch (op) {
                 case "+":
@@ -119,7 +121,6 @@ namespace Calculator
                     answer = Difference(num1, num2);
                     break;
             }
-
             return answer;
         }
 
