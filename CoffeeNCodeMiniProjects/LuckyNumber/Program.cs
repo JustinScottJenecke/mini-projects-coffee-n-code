@@ -14,12 +14,12 @@
             Console.Write("Guess: ");
             int guess = Int32.Parse(Console.ReadLine());
 
-            if (guess == realNumber)
-                Console.WriteLine("Congrats, you are lucky");
-            else
-                Console.WriteLine("Unlucky, you guessed wrong");
+            while (guess != realNumber) {
+                Console.WriteLine("Unlucky, you guessed wrong, try again.");
+                guess = Int32.Parse(Console.ReadLine());
+            }
 
-            Console.ReadLine();
+            Console.WriteLine("Congrats, you are lucky");
         }
     }
 }
