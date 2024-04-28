@@ -5,8 +5,9 @@ class Program {
         Console.WriteLine("test");
         DateTimePractice date = new DateTimePractice();
 
-        date.createDate();
+        // date.createDate();
+        // date.setLunchTime();
 
-        date.setLunchTime();
+        Console.WriteLine(Colours.Grass);
     }
 }
