@@ -18,12 +18,21 @@ namespace DerekBanasEasy
             this.sound = "no sound";
             numAnimals++;
         }
-        public Animal(string name, string sound)
+        public Animal(string name = "no name", string sound = "no sound")
         {
-            
             this.name = name;
             this.sound = sound;
             numAnimals++;
+        }
+
+        public void MakeSound() 
+        {
+            Console.WriteLine("{0} says {1}", this.name, this.sound);
+        }
+
+        public static int getNumAnimals() 
+        {
+            return numAnimals;
         }
     }
 }
