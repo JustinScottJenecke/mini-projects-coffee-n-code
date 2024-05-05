@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2-gavin-lon-easy", "gav-lon
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3-gavin-lon-easy", "3-gavin-lon-easy\3-gavin-lon-easy.csproj", "{4DEF65C8-9D0A-4A69-8D04-6C46AC8765B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerekBanasEasy", "derek-banas-basics\DerekBanasEasy.csproj", "{1D526833-5AEE-409F-A1B6-F2E1194B03B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DerekBanasEasy", "derek-banas-basics\DerekBanasEasy.csproj", "{1D526833-5AEE-409F-A1B6-F2E1194B03B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DerekBanasOOPExample", "DerekBanasOOPExample\DerekBanasOOPExample.csproj", "{B7F67477-A7FA-4102-A323-616C6AEF697E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1D526833-5AEE-409F-A1B6-F2E1194B03B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D526833-5AEE-409F-A1B6-F2E1194B03B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D526833-5AEE-409F-A1B6-F2E1194B03B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7F67477-A7FA-4102-A323-616C6AEF697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F67477-A7FA-4102-A323-616C6AEF697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F67477-A7FA-4102-A323-616C6AEF697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F67477-A7FA-4102-A323-616C6AEF697E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
